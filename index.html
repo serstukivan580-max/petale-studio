@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petale — студія манікюру в Києві | Онлайн-запис</title>
+<meta name="description" content="Petale — студія манікюру в Києві: класичний манікюр, дизайн нігтів, SPA-догляд і зміцнення. Стерильні інструменти, преміальні матеріали, запис онлайн.">
+<meta name="theme-color" content="#3c1f2c">
+<!-- Адреса сайту. Якщо зміниш домен — заміни petale-studio.vercel.app у цьому файлі, privacy.html, robots.txt і sitemap.xml -->
+<link rel="canonical" href="https://petale-studio.vercel.app/">
+
+<!-- Превʼю посилання в Telegram / Viber / Instagram / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Petale">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:url" content="https://petale-studio.vercel.app/">
+<meta property="og:title" content="Petale — студія манікюру в Києві">
+<meta property="og:description" content="Манікюр, дизайн нігтів і SPA-догляд за руками. Стерильно, преміальні матеріали, запис онлайн за 30 секунд.">
+<meta property="og:image" content="https://petale-studio.vercel.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Petale — студія манікюру: руки з ніжним манікюром">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Petale — студія манікюру в Києві">
+<meta name="twitter:description" content="Манікюр, дизайн нігтів і SPA-догляд за руками. Запис онлайн за 30 секунд.">
+<meta name="twitter:image" content="https://petale-studio.vercel.app/og-image.jpg">
+
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Головне фото першого екрана вантажимо якнайраніше -->
+<link rel="preload" as="image" href="flower-900.webp" imagesrcset="flower-480.webp 480w, flower-900.webp 900w" imagesizes="(max-width: 980px) min(480px, 100vw), 520px" fetchpriority="high">
+
+<!-- Шрифти з кирилицею; не блокують показ сторінки -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;600;700;800&display=swap"></noscript>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NailSalon",
+  "name": "Petale Nail Studio",
+  "url": "https://petale-studio.vercel.app/",
+  "image": "https://petale-studio.vercel.app/og-image.jpg",
+  "logo": "https://petale-studio.vercel.app/icon-512.png",
+  "telephone": "+380000000000",
+  "priceRange": "550–950 ₴",
+  "address": {"@type": "PostalAddress", "streetAddress": "вул. Прикладна, 12", "addressLocality": "Київ", "addressCountry": "UA"},
+  "openingHours": "Mo-Su 09:00-21:00",
+  "sameAs": ["https://www.instagram.com/petale.nails/"]
+}
+</script>
+
+<style>
+:root{
+  --blush:#f7e4e0;
+  --blush-deep:#eccac4;
+  --cream:#fbf4ee;
+  --plum:#5a3447;
+  --plum-deep:#3c1f2c;
+  --gold:#c89a5b;
+  --gold-light:#e7c98f;
+  --gold-text:#8f6430;   /* золото для дрібного тексту — читається на світлому фоні */
+  --ink:#2c2024;
+  --muted:#6f5760;
+  --white:#fff;
+  --shadow:0 20px 60px -25px rgba(60,31,44,.35);
+  --radius:22px;
+  --font-display:'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body:'Manrope', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-padding-top:84px;-webkit-text-size-adjust:100%;}
+body{font-family:var(--font-body);color:var(--ink);background:var(--cream);overflow-x:hidden;line-height:1.5;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+img{max-width:100%;display:block;height:auto;}
+button,input,select{font:inherit;}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px;}
+.container{width:100%;max-width:1180px;margin:0 auto;padding:0 24px;}
+.eyebrow{font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--gold-text);}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;color:var(--plum-deep);}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.skip-link{position:absolute;left:12px;top:-60px;z-index:2000;background:var(--plum-deep);color:#fff;padding:10px 16px;border-radius:10px;}
+.skip-link:focus{top:12px;}
+
+/* ===== HEADER ===== */
+header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(251,244,238,.95);border-bottom:1px solid rgba(60,31,44,.08);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1180px;margin:0 auto;}
+.logo{font-family:var(--font-display);font-size:24px;font-weight:600;color:var(--plum-deep);}
+.logo span,.footer-logo span{color:var(--gold);}
+.nav-links{display:flex;gap:36px;font-weight:600;font-size:14px;}
+.nav-links a:hover{color:var(--gold-text);text-decoration:underline;text-underline-offset:6px;}
+.nav-cta{display:inline-block;padding:11px 24px;border-radius:999px;font-weight:700;font-size:13.5px;background:linear-gradient(135deg,var(--gold-light),var(--gold));color:#3c2710;}
+.nav-cta:hover{background:var(--gold);}
+.burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:9px;background:none;border:0;cursor:pointer;}
+.burger span{display:block;width:26px;height:2px;background:var(--plum-deep);}
+.mobile-menu,.menu-backdrop{display:none;}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:110px 0 70px;overflow:hidden;
+  background:
+    radial-gradient(ellipse 900px 600px at 85% 10%,rgba(231,201,143,.35),transparent 60%),
+    radial-gradient(ellipse 800px 700px at -10% 90%,rgba(236,202,196,.55),transparent 60%),
+    var(--cream);
+}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;}
+.hero-text .eyebrow{margin-bottom:18px;display:block;}
+.hero-text h1{font-size:clamp(38px,5.4vw,66px);line-height:1.08;margin-bottom:22px;}
+.hero-text h1 em{font-style:italic;color:var(--gold-text);font-weight:500;}
+.hero-text p{font-size:17px;line-height:1.65;color:var(--muted);max-width:460px;margin-bottom:34px;}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;padding:18px 36px;border-radius:999px;font-weight:700;font-size:15px;background:linear-gradient(135deg,#e3bd7b,#c8955a);color:#2e1d0b;border:none;cursor:pointer;box-shadow:0 18px 40px -16px rgba(192,137,76,.75);}
+.btn-primary:hover{background:#c8955a;}
+.hero-stats{display:flex;gap:36px;margin-top:46px;}
+.hero-stats div{font-size:13px;color:var(--muted);}
+.hero-stats strong{display:block;font-family:var(--font-display);font-size:26px;color:var(--plum-deep);font-weight:600;}
+.hero-visual{position:relative;border-radius:32px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow);background:var(--blush);}
+.hero-visual img{width:100%;height:100%;object-fit:cover;}
+.hero-badge{position:absolute;bottom:22px;left:22px;background:rgba(255,255,255,.94);padding:14px 20px;border-radius:16px;font-family:var(--font-display);font-size:14px;font-weight:600;color:var(--plum-deep);box-shadow:0 12px 30px -14px rgba(0,0,0,.3);}
+
+/* ===== SECTIONS ===== */
+.section{padding:110px 0;}
+.section-head{text-align:center;max-width:620px;margin:0 auto 60px;}
+.section-head .eyebrow{display:block;margin-bottom:14px;}
+.section-head h2{font-size:clamp(30px,4vw,46px);line-height:1.15;}
+.section-head p{margin-top:16px;color:var(--muted);font-size:16px;line-height:1.6;}
+
+/* ===== SERVICES ===== */
+.services{background:var(--white);}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.service-card{display:flex;flex-direction:column;background:linear-gradient(180deg,#fff,var(--cream));border:1px solid rgba(60,31,44,.08);border-radius:var(--radius);padding:36px 28px;color:inherit;}
+.service-card:hover{border-color:rgba(200,154,91,.6);box-shadow:var(--shadow);}
+.service-icon{width:58px;height:58px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--blush),var(--blush-deep));margin-bottom:22px;font-size:26px;}
+.service-card h3{font-size:20px;margin-bottom:10px;}
+.service-card p{font-size:14.5px;color:var(--muted);line-height:1.6;margin-bottom:22px;flex-grow:1;}
+.service-price{display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px dashed rgba(60,31,44,.18);}
+.service-price .price{font-family:var(--font-display);font-size:22px;font-weight:600;color:var(--plum-deep);}
+.service-price .price span{font-family:var(--font-body);font-size:13px;font-weight:400;color:var(--muted);}
+.service-price .arrow{width:34px;height:34px;flex-shrink:0;border-radius:50%;background:var(--plum-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;}
+.service-card:hover .arrow{background:var(--gold);color:#2e1d0b;}
+
+/* ===== ADVANTAGES ===== */
+.advantages{background:linear-gradient(180deg,var(--cream),var(--blush) 120%);}
+.adv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+.adv-card{text-align:center;padding:10px 14px;}
+.adv-num{font-family:var(--font-display);font-style:italic;font-size:46px;color:var(--gold);margin-bottom:14px;line-height:1.1;}
+.adv-card h3{font-size:18px;margin-bottom:10px;}
+.adv-card p{font-size:14px;color:var(--muted);line-height:1.6;}
+
+/* ===== GALLERY ===== */
+.gallery{background:var(--white);}
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:270px 270px;gap:18px;}
+.gallery-item{position:relative;border-radius:18px;overflow:hidden;background:var(--blush);margin:0;}
+.gallery-item.tall{grid-row:span 2;}
+.gallery-item img{width:100%;height:100%;object-fit:cover;}
+.gallery-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 20px 18px;background:linear-gradient(0deg,rgba(60,31,44,.7),transparent);color:#fff;font-family:var(--font-display);font-weight:600;font-size:15px;}
+
+/* ===== BOOKING ===== */
+.booking{background:linear-gradient(135deg,var(--plum-deep),var(--plum));position:relative;overflow:hidden;}
+.booking::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(231,201,143,.18),transparent 65%);top:-200px;right:-150px;}
+.booking-grid{display:grid;grid-template-columns:.9fr 1.1fr;grid-template-rows:auto 1fr;grid-template-areas:"text form" "contacts form";gap:0 60px;align-items:start;position:relative;z-index:2;}
+.booking-text{grid-area:text;}
+.booking-form{grid-area:form;}
+.contacts{grid-area:contacts;}
+.booking-text .eyebrow{color:var(--gold-light);}
+.booking-text h2{color:#fff;font-size:clamp(30px,4vw,42px);margin:16px 0 18px;line-height:1.18;}
+.booking-text > p{color:rgba(255,255,255,.8);font-size:15.5px;line-height:1.7;margin-bottom:28px;}
+.booking-perks{display:flex;flex-direction:column;gap:14px;}
+.booking-perks li{display:flex;align-items:center;gap:12px;color:#fff;font-size:14.5px;}
+.booking-perks li::before{content:'✓';width:24px;height:24px;border-radius:50%;background:var(--gold);color:#3c2710;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+
+.contacts{margin-top:40px;padding-top:32px;border-top:1px solid rgba(255,255,255,.14);display:grid;gap:18px;}
+.contacts h3{color:#fff;font-size:22px;}
+.contact-row{display:flex;gap:14px;align-items:flex-start;color:#fff;font-size:15px;line-height:1.5;}
+.contact-row .ic{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.contact-row .ic svg{width:19px;height:19px;stroke:var(--gold-light);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.contact-row small{display:block;color:rgba(255,255,255,.7);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;}
+.contact-row a{text-decoration:underline;text-decoration-color:rgba(231,201,143,.5);text-underline-offset:4px;}
+.contact-row a:hover{color:var(--gold-light);}
+.socials{display:flex;flex-wrap:wrap;gap:10px;}
+.socials a{display:inline-flex;align-items:center;min-height:44px;padding:10px 18px;border-radius:999px;border:1px solid rgba(255,255,255,.28);color:#fff;font-size:14px;font-weight:600;}
+.socials a:hover{background:rgba(255,255,255,.1);}
+
+.booking-form{background:var(--white);border-radius:28px;padding:42px;box-shadow:0 40px 80px -30px rgba(0,0,0,.5);}
+.booking-form h3{font-size:24px;margin-bottom:6px;}
+.booking-form .lead{color:var(--muted);font-size:14px;margin-bottom:28px;}
+.form-group{margin-bottom:18px;}
+.form-group label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#6f5760;margin-bottom:8px;}
+.form-group input,.form-group select{width:100%;min-height:50px;padding:13px 16px;border-radius:12px;border:1.5px solid rgba(60,31,44,.18);background:var(--cream);font-size:16px;color:var(--ink);}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:var(--gold);background:#fff;box-shadow:0 0 0 3px rgba(200,154,91,.25);}
+.form-group.invalid input,.form-group.invalid select{border-color:#b3261e;}
+.form-error{display:none;color:#b3261e;font-size:13px;margin-top:6px;}
+.form-group.invalid .form-error{display:block;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.submit-btn{width:100%;margin-top:8px;padding:17px;border:none;border-radius:14px;background:linear-gradient(135deg,#e3bd7b,#c8955a);color:#2e1d0b;font-weight:800;font-size:15.5px;cursor:pointer;box-shadow:0 16px 34px -14px rgba(192,137,76,.8);}
+.submit-btn:hover{background:#c8955a;}
+.submit-btn:disabled{opacity:.7;cursor:wait;}
+.consent{margin-top:14px;font-size:12.5px;line-height:1.5;color:var(--muted);text-align:center;}
+.consent a{text-decoration:underline;}
+
+.success-box{text-align:center;padding:10px 0;}
+.success-box[hidden]{display:none;}
+.success-icon{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--blush),var(--gold-light));display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 18px;}
+.success-box h3{margin-bottom:10px;}
+.success-box p{color:var(--muted);font-size:14.5px;line-height:1.6;margin-bottom:6px;}
+.summary{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:16px 0 4px;}
+.summary span{padding:6px 12px;border-radius:999px;background:var(--cream);border:1px solid rgba(60,31,44,.1);font-size:13px;font-weight:600;color:var(--plum-deep);}
+.send-buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;}
+.send-buttons[hidden]{display:none;}
+.send-buttons a{display:flex;align-items:center;justify-content:center;min-height:48px;padding:12px;border-radius:12px;font-weight:700;font-size:14.5px;color:#fff;}
+.send-tg{background:#2481cc;}
+.send-viber{background:#7360f2;}
+.send-call{grid-column:span 2;background:var(--plum-deep);}
+.send-buttons a:hover{filter:brightness(1.1);}
+.success-gift{margin-top:18px;padding:14px 18px;border-radius:14px;background:var(--cream);border:1px dashed var(--gold);font-size:13.5px;color:var(--plum-deep);font-weight:600;}
+.link-btn{margin-top:16px;background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font-size:14px;padding:8px;}
+
+/* ===== FOOTER ===== */
+footer{background:var(--plum-deep);color:rgba(255,255,255,.72);padding:50px 0 28px;font-size:13.5px;}
+.footer-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:24px;flex-wrap:wrap;gap:20px;}
+.footer-logo{font-family:var(--font-display);font-size:22px;color:#fff;}
+.footer-links{display:flex;flex-wrap:wrap;gap:8px 28px;}
+.footer-links a:hover{color:#fff;text-decoration:underline;}
+.footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.footer-bottom a{text-decoration:underline;}
+.footer-bottom a:hover{color:#fff;}
+
+/* кнопка запису внизу екрана на телефоні */
+.mobile-cta{display:none;}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:980px){
+  .hero{min-height:0;}
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-visual{max-width:480px;width:100%;margin:0 auto;}
+  .services-grid,.adv-grid{grid-template-columns:repeat(2,1fr);}
+  .booking-grid{grid-template-columns:1fr;grid-template-rows:none;grid-template-areas:"text" "form" "contacts";gap:0;}
+  .booking-form{margin-top:40px;}
+  .booking-form{padding:30px 24px;}
+}
+@media (max-width:700px){
+  .nav{padding:10px 16px 10px 20px;}
+  .nav-links,.nav > .nav-cta{display:none;}
+  .burger{display:flex;}
+  .mobile-menu{position:fixed;top:0;right:0;width:78%;max-width:320px;height:100%;background:var(--white);box-shadow:-10px 0 40px rgba(0,0,0,.15);z-index:1001;padding:96px 32px 40px;flex-direction:column;gap:22px;}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{font-family:var(--font-display);font-size:21px;color:var(--plum-deep);}
+  .mobile-menu .nav-cta{font-family:var(--font-body);font-size:15px;text-align:center;margin-top:10px;padding:14px 24px;}
+  .menu-close{position:absolute;top:14px;right:14px;width:44px;height:44px;border:0;background:none;font-size:30px;line-height:1;color:var(--plum-deep);cursor:pointer;}
+  .menu-backdrop.show{display:block;position:fixed;inset:0;background:rgba(44,32,36,.45);z-index:1000;}
+  .container{padding:0 16px;}
+  .hero{padding:96px 0 56px;}
+  .hero-text p{font-size:16px;}
+  .btn-primary{width:100%;justify-content:center;}
+  .hero-stats{gap:14px;justify-content:space-between;margin-top:36px;}
+  .hero-stats div{flex:1;font-size:12.5px;}
+  .hero-stats strong{font-size:22px;}
+  .services-grid{grid-template-columns:1fr;}
+  .adv-grid{grid-template-columns:1fr 1fr;gap:28px 12px;}
+  .adv-card{padding:0;}
+  .adv-num{font-size:38px;margin-bottom:8px;}
+  .section{padding:72px 0;}
+  .section-head{margin-bottom:40px;}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:12px;}
+  .gallery-item.tall{grid-row:auto;grid-column:span 2;aspect-ratio:1/1;}
+  .gallery-item.tall img{object-position:center 30%;}
+  .gallery-item:not(.tall){aspect-ratio:1/1;}
+  .gallery-item figcaption{padding:30px 12px 12px;font-size:13px;}
+  .form-row{grid-template-columns:1fr;gap:0;}
+  .booking-form{padding:26px 18px;border-radius:22px;}
+  .send-buttons{grid-template-columns:1fr;}
+  .send-call{grid-column:auto;}
+  .footer-bottom{flex-direction:column;}
+  body{padding-bottom:76px;}
+  .mobile-cta{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:900;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(251,244,238,.97);border-top:1px solid rgba(60,31,44,.1);}
+  .mobile-cta a{display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:14px;font-weight:800;font-size:15px;}
+  .mobile-cta .cta-book{flex:1;background:linear-gradient(135deg,#e3bd7b,#c8955a);color:#2e1d0b;}
+  .mobile-cta .cta-call{width:56px;background:var(--plum-deep);color:#fff;}
+  .mobile-cta .cta-call svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;}
+}
+@media (max-width:380px){
+  .hero-stats strong{font-size:19px;}
+  .hero-stats div{font-size:11.5px;}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти до змісту</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+</svg>
+
+<header>
+  <nav class="nav" aria-label="Головне меню">
+    <a href="#top" class="logo" aria-label="Petale — на початок сторінки">Petale<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Послуги</a></li>
+      <li><a href="#advantages">Переваги</a></li>
+      <li><a href="#gallery">Галерея</a></li>
+      <li><a href="#contacts">Контакти</a></li>
+    </ul>
+    <a href="#booking" class="nav-cta">Записатися</a>
+    <button class="burger" id="burger" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="menu-backdrop" id="backdrop"></div>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Мобільне меню">
+  <button class="menu-close" id="menuClose" type="button" aria-label="Закрити меню">×</button>
+  <a href="#services">Послуги</a>
+  <a href="#advantages">Переваги</a>
+  <a href="#gallery">Галерея</a>
+  <a href="#contacts">Контакти</a>
+  <a href="#booking" class="nav-cta">Записатися</a>
+</nav>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <span class="eyebrow">Студія манікюру · Київ</span>
+      <h1>Доглянуті руки —<br>це твоя <em>тиха розкіш</em></h1>
+      <p>Petale поєднує японську точність догляду, преміальні матеріали та атмосферу, у якій хочеться затриматись довше, ніж на годину запису.</p>
+      <a href="#booking" class="btn-primary">Записатися зараз →</a>
+      <div class="hero-stats">
+        <div><strong>6 років</strong>на ринку краси</div>
+        <div><strong>4200+</strong>задоволених рук</div>
+        <div><strong>4.9 / 5</strong>середня оцінка</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="flower-900.webp" srcset="flower-480.webp 480w, flower-900.webp 900w" sizes="(max-width: 980px) min(480px, 100vw), 520px" width="900" height="1350" alt="Руки з ніжним нюдовим манікюром над келихом з білою квіткою" fetchpriority="high">
+      <div class="hero-badge">Авторський дизайн нігтів ✦</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services section" id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Послуги та ціни</span>
+      <h2>Що ми робимо найкраще</h2>
+      <p>Чотири ритуали для рук, які не соромно показати — від базового відновлення до вечірнього блиску.</p>
+    </div>
+    <div class="services-grid">
+      <a href="#booking" class="service-card" data-service="Класичний манікюр — 650 ₴">
+        <div class="service-icon" aria-hidden="true">💅</div>
+        <h3>Класичний манікюр</h3>
+        <p>Делікатна обробка кутикули, форма нігтя «під лінійку» та покриття гель-лаком у будь-якому відтінку.</p>
+        <div class="service-price">
+          <div class="price">650 ₴ <span>/ сеанс</span></div>
+          <div class="arrow" aria-hidden="true">→</div>
+        </div>
+      </a>
+      <a href="#booking" class="service-card" data-service="Дизайн нігтів de luxe — 950 ₴">
+        <div class="service-icon" aria-hidden="true">✨</div>
+        <h3>Дизайн нігтів de luxe</h3>
+        <p>Французький кант, втирка, фольга, мікрострази — авторські композиції під настрій або подію.</p>
+        <div class="service-price">
+          <div class="price">950 ₴ <span>/ сеанс</span></div>
+          <div class="arrow" aria-hidden="true">→</div>
+        </div>
+      </a>
+      <a href="#booking" class="service-card" data-service="SPA-догляд за руками — 780 ₴">
+        <div class="service-icon" aria-hidden="true">🌿</div>
+        <h3>SPA-догляд за руками</h3>
+        <p>Пілінг, парафінотерапія та масаж із олією ши — для шкіри рук, м'якої як пелюстка.</p>
+        <div class="service-price">
+          <div class="price">780 ₴ <span>/ сеанс</span></div>
+          <div class="arrow" aria-hidden="true">→</div>
+        </div>
+      </a>
+      <a href="#booking" class="service-card" data-service="Зміцнення гель-base — 550 ₴">
+        <div class="service-icon" aria-hidden="true">🪞</div>
+        <h3>Зміцнення гель-base</h3>
+        <p>Армування тонкої нігтьової пластини, яке захищає від сколів та подовжує носкість покриття.</p>
+        <div class="service-price">
+          <div class="price">550 ₴ <span>/ сеанс</span></div>
+          <div class="arrow" aria-hidden="true">→</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ADVANTAGES -->
+<section class="advantages section" id="advantages">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Переваги</span>
+      <h2>Чому обирають Petale</h2>
+    </div>
+    <div class="adv-grid">
+      <div class="adv-card">
+        <div class="adv-num" aria-hidden="true">01</div>
+        <h3>Стерильність понад усе</h3>
+        <p>Кожен інструмент проходить автоклавування — як у медичному кабінеті.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-num" aria-hidden="true">02</div>
+        <h3>Преміальна косметика</h3>
+        <p>Гель-лаки та доглядові засоби лише європейських та японських брендів.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-num" aria-hidden="true">03</div>
+        <h3>Майстри з досвідом 5+ років</h3>
+        <p>Регулярне підвищення кваліфікації та участь у міжнародних чемпіонатах nail-арту.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-num" aria-hidden="true">04</div>
+        <h3>Атмосфера для відпочинку</h3>
+        <p>Ароматична кава, плед і тиша — щоб годину запису хотілося продовжити.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery section" id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Галерея</span>
+      <h2>Останні роботи студії</h2>
+      <p>Кожен манікюр — маленький витвір мистецтва на кінчиках пальців.</p>
+    </div>
+    <div class="gallery-grid">
+      <figure class="gallery-item tall">
+        <img src="evening-900.webp" srcset="evening-480.webp 480w, evening-900.webp 900w" sizes="(max-width: 700px) 100vw, 570px" width="900" height="1350" loading="lazy" decoding="async" alt="Жінка торкається обличчя рукою з делікатним манікюром і каблучкою">
+        <figcaption>Вечірній образ</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="nude-900.webp" srcset="nude-480.webp 480w, nude-900.webp 900w" sizes="(max-width: 700px) 50vw, 570px" width="900" height="600" loading="lazy" decoding="async" alt="Доглянуті мигдалеподібні нігті з нюдовим покриттям">
+        <figcaption>Натуральний nude</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="process-900.webp" srcset="process-480.webp 480w, process-900.webp 900w" sizes="(max-width: 700px) 50vw, 570px" width="900" height="600" loading="lazy" decoding="async" alt="Майстриня наносить покриття на нігті клієнтки">
+        <figcaption>Робота майстра</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING + CONTACTS -->
+<section class="booking section" id="booking">
+  <div class="container booking-grid">
+    <div class="booking-text">
+      <span class="eyebrow">Запис онлайн</span>
+      <h2>Забронюй свій час турботи</h2>
+      <p>Залиш заявку — адміністратор зв'яжеться протягом 15 хвилин, щоб підтвердити зручний час візиту.</p>
+      <ul class="booking-perks">
+        <li>Підтвердження запису у Viber/Telegram</li>
+        <li>Безкоштовне скасування за 24 години</li>
+        <li>Подарунок при першому візиті</li>
+      </ul>
+
+    </div>
+
+    <div class="booking-form">
+      <div id="formView">
+        <h3>Форма запису</h3>
+        <p class="lead">Заповніть поля — це займе 30 секунд</p>
+        <form id="bookingForm" novalidate>
+          <div class="form-group">
+            <label for="name">Ім'я</label>
+            <input type="text" id="name" name="name" placeholder="Ваше ім'я" autocomplete="given-name" required minlength="2" maxlength="60">
+            <div class="form-error">Вкажіть, будь ласка, ім'я</div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+380 ХХ ХХХ ХХ ХХ" autocomplete="tel" inputmode="tel" required>
+            <div class="form-error">Вкажіть номер телефону, наприклад +380 67 123 45 67</div>
+          </div>
+          <div class="form-group">
+            <label for="service">Послуга</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Оберіть послугу</option>
+              <option>Класичний манікюр — 650 ₴</option>
+              <option>Дизайн нігтів de luxe — 950 ₴</option>
+              <option>SPA-догляд за руками — 780 ₴</option>
+              <option>Зміцнення гель-base — 550 ₴</option>
+            </select>
+            <div class="form-error">Оберіть послугу</div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Бажана дата</label>
+              <input type="date" id="date" name="date" required>
+              <div class="form-error">Оберіть дату, не раніше сьогодні</div>
+            </div>
+            <div class="form-group">
+              <label for="time">Зручний час</label>
+              <select id="time" name="time">
+                <option>Будь-який</option>
+                <option>Ранок (09–12)</option>
+                <option>День (12–16)</option>
+                <option>Вечір (16–21)</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="submit-btn" id="submitBtn">Записатися</button>
+          <p class="consent">Натискаючи кнопку, ви погоджуєтесь з <a href="privacy.html">політикою конфіденційності</a></p>
+        </form>
+      </div>
+
+      <div class="success-box" id="successView" hidden tabindex="-1" aria-live="polite">
+        <div class="success-icon" aria-hidden="true">🌸</div>
+        <h3 id="successTitle">Дякуємо, заявку прийнято!</h3>
+        <p id="successText">Ми зв'яжемося з вами найближчим часом, щоб підтвердити запис.</p>
+        <div class="summary" id="summary"></div>
+        <div class="send-buttons" id="sendButtons" hidden>
+          <a class="send-tg" id="sendTg" href="#" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a class="send-viber" id="sendViber" href="#">Viber</a>
+          <a class="send-call" id="sendCall" href="#">Подзвонити</a>
+        </div>
+        <div class="success-gift">🎁 На перший візит — знижка 10% та SPA-покриття у подарунок</div>
+        <button type="button" class="link-btn" id="newBooking">Записати ще когось</button>
+      </div>
+    </div>
+
+    <!-- КОНТАКТИ: заміни на справжні (телефон і месенджери ще й у CONFIG внизу сторінки) -->
+    <div class="contacts" id="contacts">
+      <h3>Контакти</h3>
+      <div class="contact-row">
+        <div class="ic" aria-hidden="true"><svg><use href="#i-pin"/></svg></div>
+        <div><small>Адреса</small>вул. Прикладна, 12, Київ<br><a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%B2%D1%83%D0%BB.%20%D0%9F%D1%80%D0%B8%D0%BA%D0%BB%D0%B0%D0%B4%D0%BD%D0%B0%2C%2012%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener noreferrer">Відкрити на карті</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="ic" aria-hidden="true"><svg><use href="#i-phone"/></svg></div>
+        <div><small>Телефон</small><a href="tel:+380000000000">+380 00 000 00 00</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="ic" aria-hidden="true"><svg><use href="#i-clock"/></svg></div>
+        <div><small>Графік</small>Щодня 09:00 – 21:00</div>
+      </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/petale.nails/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://t.me/petale_nails" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="viber://chat?number=%2B380000000000">Viber</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo">Petale<span>.</span></div>
+      <nav class="footer-links" aria-label="Меню у футері">
+        <a href="#services">Послуги</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#contacts">Контакти</a>
+        <a href="#booking">Запис</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Petale Nail Studio. Усі права захищені.</span>
+      <a href="privacy.html">Політика конфіденційності</a>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta">
+  <a href="#booking" class="cta-book">Записатися онлайн</a>
+  <a href="tel:+380000000000" class="cta-call" aria-label="Подзвонити в студію"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
+</div>
+
+<script>
+/* ===== НАЛАШТУВАННЯ — заміни на свої дані ===== */
+const CONFIG = {
+  phone: '+380000000000',       // телефон без пробілів
+  telegram: 'petale_nails',     // username без @
+  viber: '+380000000000',
+  // Куди надсилати заявки. Порожньо = клієнтка надсилає заявку в Telegram/Viber однією кнопкою.
+  // Напр. Formspree (безкоштовно, заявки на пошту): 'https://formspree.io/f/XXXXXXX'
+  formEndpoint: '',
+  // Google Analytics 4, вигляд G-XXXXXXXXXX. Порожньо = не підключено
+  ga4Id: ''
+};
+
+const $ = (s, root = document) => root.querySelector(s);
+
+/* ---- мобільне меню ---- */
+const burger = $('#burger'), menu = $('#mobileMenu'), backdrop = $('#backdrop');
+function setMenu(open) {
+  menu.classList.toggle('open', open);
+  backdrop.classList.toggle('show', open);
+  burger.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+  if (open) $('#menuClose').focus();
+}
+burger.addEventListener('click', () => setMenu(true));
+$('#menuClose').addEventListener('click', () => { setMenu(false); burger.focus(); });
+backdrop.addEventListener('click', () => setMenu(false));
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('open')) { setMenu(false); burger.focus(); } });
+
+/* ---- клік по послузі одразу обирає її у формі ---- */
+const form = $('#bookingForm');
+const F = form.elements;
+document.querySelectorAll('[data-service]').forEach(card => card.addEventListener('click', () => {
+  F.service.value = card.dataset.service;
+  F.service.closest('.form-group').classList.remove('invalid');
+}));
+
+/* ---- дата: не раніше сьогодні ---- */
+const pad = n => String(n).padStart(2, '0');
+const now = new Date();
+const today = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+F.date.min = today;
+$('#year').textContent = now.getFullYear();
+
+/* ---- перевірка полів ---- */
+const checks = {
+  name: v => v.trim().length >= 2,
+  phone: v => v.replace(/\D/g, '').length >= 10,
+  service: v => !!v,
+  date: v => !!v && v >= today
+};
+function validate(field) {
+  const ok = checks[field.name] ? checks[field.name](field.value) : true;
+  field.closest('.form-group').classList.toggle('invalid', !ok);
+  field.setAttribute('aria-invalid', !ok);
+  return ok;
+}
+Object.keys(checks).forEach(n => F[n].addEventListener('change', () => validate(F[n])));
+
+const formatDate = v => { const [y, m, d] = v.split('-'); return `${d}.${m}.${y}`; };
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const fields = Object.keys(checks).map(n => F[n]);
+  const bad = fields.filter(f => !validate(f));
+  if (bad.length) { bad[0].focus(); return; }
+
+  const data = {
+    name: F.name.value.trim(),
+    phone: F.phone.value.trim(),
+    service: F.service.value,
+    date: formatDate(F.date.value),
+    time: F.time.value
+  };
+  const message = `Привіт! Хочу записатися в Petale 🌸\nІм'я: ${data.name}\nТелефон: ${data.phone}\nПослуга: ${data.service}\nДата: ${data.date}\nЧас: ${data.time}`;
+
+  const btn = $('#submitBtn');
+  btn.disabled = true;
+  btn.textContent = 'Надсилаємо…';
+  let sent = false;
+  if (CONFIG.formEndpoint) {
+    try {
+      const res = await fetch(CONFIG.formEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ ...data, _subject: 'Нова заявка Petale' })
+      });
+      sent = res.ok;
+    } catch (_) { sent = false; }
+  }
+  btn.disabled = false;
+  btn.textContent = 'Записатися';
+
+  // якщо заявка не дійшла на сервер — просимо надіслати її в месенджер, щоб не загубилась
+  $('#successTitle').textContent = sent ? 'Дякуємо, заявку прийнято!' : 'Лишився один крок';
+  $('#successText').textContent = sent
+    ? 'Адміністратор зв\'яжеться з вами протягом 15 хвилин, щоб підтвердити запис.'
+    : 'Надішліть заявку в месенджер одним натиском або подзвоніть — і ми підтвердимо запис.';
+  $('#summary').replaceChildren(...[data.service, data.date, data.time].map(t => {
+    const s = document.createElement('span'); s.textContent = t; return s;
+  }));
+  $('#sendButtons').hidden = sent;
+  if (!sent) {
+    $('#sendTg').href = 'https://t.me/' + CONFIG.telegram;
+    $('#sendTg').onclick = () => { navigator.clipboard && navigator.clipboard.writeText(message).catch(() => {}); };
+    $('#sendViber').href = 'viber://chat?number=' + encodeURIComponent(CONFIG.viber) + '&draft=' + encodeURIComponent(message);
+    $('#sendCall').href = 'tel:' + CONFIG.phone;
+  }
+  if (window.gtag) gtag('event', 'generate_lead', { service: data.service });
+
+  $('#formView').hidden = true;
+  $('#successView').hidden = false;
+  $('#successView').focus();
+  form.reset();
+});
+
+$('#newBooking').addEventListener('click', () => {
+  $('#successView').hidden = true;
+  $('#formView').hidden = false;
+  F.name.focus();
+});
+
+/* ---- Google Analytics 4 (вмикається, коли вписано ga4Id) ---- */
+if (CONFIG.ga4Id) {
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', CONFIG.ga4Id);
+  const g = document.createElement('script');
+  g.async = true;
+  g.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(CONFIG.ga4Id);
+  document.head.appendChild(g);
+}
+</script>
+</body>
+</html>

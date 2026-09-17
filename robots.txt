@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://petale-studio.vercel.app/sitemap.xml
