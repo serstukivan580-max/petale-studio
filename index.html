@@ -75,7 +75,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-padding-top:84px;-webkit-text-size-adjust:100%;}
-body{font-family:var(--font-body);color:var(--ink);background:var(--cream);overflow-x:hidden;line-height:1.5;}
+body{font-family:var(--font-body);color:var(--ink);background:var(--cream);overflow-x:hidden;line-height:1.5;-webkit-tap-highlight-color:rgba(200,154,91,.25);}
 a{text-decoration:none;color:inherit;}
 ul{list-style:none;}
 img{max-width:100%;display:block;height:auto;}
@@ -244,48 +244,109 @@ footer{background:var(--plum-deep);color:rgba(255,255,255,.72);padding:50px 0 28
   .booking-form{padding:30px 24px;}
 }
 @media (max-width:700px){
-  .nav{padding:10px 16px 10px 20px;}
+  html{scroll-padding-top:70px;}
+  .container{padding:0 18px;}
+  .section{padding:56px 0;}
+  .section-head{margin-bottom:28px;}
+  .section-head h2{font-size:27px;line-height:1.2;}
+  .section-head p{font-size:14.5px;margin-top:10px;}
+  .section-head .eyebrow{margin-bottom:10px;}
+
+  /* шапка */
+  .nav{padding:9px 10px 9px 18px;padding-right:calc(10px + env(safe-area-inset-right));}
+  .logo{font-size:21px;padding:6px 0;}
   .nav-links,.nav > .nav-cta{display:none;}
   .burger{display:flex;}
-  .mobile-menu{position:fixed;top:0;right:0;width:78%;max-width:320px;height:100%;background:var(--white);box-shadow:-10px 0 40px rgba(0,0,0,.15);z-index:1001;padding:96px 32px 40px;flex-direction:column;gap:22px;}
+  .mobile-menu{position:fixed;top:0;right:0;width:80%;max-width:300px;height:100%;background:var(--white);box-shadow:-10px 0 40px rgba(0,0,0,.15);z-index:1001;padding:84px 26px calc(30px + env(safe-area-inset-bottom));flex-direction:column;gap:20px;overflow-y:auto;}
   .mobile-menu.open{display:flex;}
-  .mobile-menu a{font-family:var(--font-display);font-size:21px;color:var(--plum-deep);}
-  .mobile-menu .nav-cta{font-family:var(--font-body);font-size:15px;text-align:center;margin-top:10px;padding:14px 24px;}
-  .menu-close{position:absolute;top:14px;right:14px;width:44px;height:44px;border:0;background:none;font-size:30px;line-height:1;color:var(--plum-deep);cursor:pointer;}
+  .mobile-menu a{font-family:var(--font-display);font-size:20px;color:var(--plum-deep);padding:6px 0;}
+  .mobile-menu .nav-cta{font-family:var(--font-body);font-size:15px;text-align:center;margin-top:6px;padding:15px 24px;}
+  .menu-close{position:absolute;top:12px;right:12px;width:44px;height:44px;border:0;background:none;font-size:30px;line-height:1;color:var(--plum-deep);cursor:pointer;}
   .menu-backdrop.show{display:block;position:fixed;inset:0;background:rgba(44,32,36,.45);z-index:1000;}
-  .container{padding:0 16px;}
-  .hero{padding:96px 0 56px;}
-  .hero-text p{font-size:16px;}
-  .btn-primary{width:100%;justify-content:center;}
-  .hero-stats{gap:14px;justify-content:space-between;margin-top:36px;}
-  .hero-stats div{flex:1;font-size:12.5px;}
-  .hero-stats strong{font-size:22px;}
-  .services-grid{grid-template-columns:1fr;}
-  .adv-grid{grid-template-columns:1fr 1fr;gap:28px 12px;}
-  .adv-card{padding:0;}
-  .adv-num{font-size:38px;margin-bottom:8px;}
-  .section{padding:72px 0;}
-  .section-head{margin-bottom:40px;}
-  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:12px;}
-  .gallery-item.tall{grid-row:auto;grid-column:span 2;aspect-ratio:1/1;}
+
+  /* перший екран */
+  .hero{padding:78px 0 44px;}
+  .hero-grid{gap:26px;}
+  .hero-text .eyebrow{margin-bottom:12px;}
+  .hero-text h1{font-size:33px;line-height:1.14;margin-bottom:14px;}
+  .hero-text p{font-size:15.5px;line-height:1.6;margin-bottom:22px;}
+  .btn-primary{width:100%;justify-content:center;padding:17px 24px;}
+  .hero-stats{gap:10px;justify-content:space-between;margin-top:26px;}
+  .hero-stats div{flex:1;font-size:12px;line-height:1.35;}
+  .hero-stats strong{font-size:21px;margin-bottom:2px;}
+  .hero-visual{border-radius:24px;aspect-ratio:1/1;max-width:none;}
+  .hero-visual img{object-position:center 35%;}
+  .hero-badge{bottom:14px;left:14px;padding:10px 14px;font-size:13px;border-radius:12px;}
+
+  /* послуги — компактні рядки */
+  .services-grid{grid-template-columns:1fr;gap:12px;}
+  .service-card{display:grid;grid-template-columns:46px 1fr;grid-template-areas:"icon title" "desc desc" "price price";align-items:center;column-gap:12px;padding:18px;border-radius:18px;}
+  .service-icon{grid-area:icon;width:46px;height:46px;margin:0;border-radius:13px;font-size:21px;}
+  .service-card h3{grid-area:title;font-size:18px;margin:0;}
+  .service-card p{grid-area:desc;font-size:13.5px;line-height:1.5;margin:10px 0 0;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+  .service-price{grid-area:price;margin-top:12px;padding-top:12px;}
+  .service-price .price{font-size:20px;}
+  .service-price .arrow{width:38px;height:38px;}
+
+  /* переваги */
+  .adv-grid{grid-template-columns:1fr 1fr;gap:22px 14px;}
+  .adv-card{padding:0;text-align:left;}
+  .adv-num{font-size:32px;margin-bottom:4px;}
+  .adv-card h3{font-size:15.5px;line-height:1.25;margin-bottom:6px;}
+  .adv-card p{font-size:13px;line-height:1.5;}
+
+  /* галерея */
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:10px;}
+  .gallery-item{border-radius:14px;}
+  .gallery-item.tall{grid-row:auto;grid-column:span 2;aspect-ratio:5/4;}
   .gallery-item.tall img{object-position:center 30%;}
   .gallery-item:not(.tall){aspect-ratio:1/1;}
-  .gallery-item figcaption{padding:30px 12px 12px;font-size:13px;}
+  .gallery-item figcaption{padding:26px 12px 10px;font-size:13px;}
+
+  /* запис і контакти */
+  .booking-grid{grid-template-columns:1fr;grid-template-rows:none;grid-template-areas:"text" "form" "contacts";gap:0;}
+  .booking-text h2{font-size:27px;margin:12px 0 12px;}
+  .booking-text > p{font-size:14.5px;margin-bottom:20px;}
+  .booking-perks li{font-size:14px;gap:10px;}
+  .booking-form{margin-top:28px;padding:22px 16px;border-radius:20px;}
+  .booking-form h3{font-size:21px;}
+  .booking-form .lead{margin-bottom:20px;}
+  .form-group{margin-bottom:14px;}
   .form-row{grid-template-columns:1fr;gap:0;}
-  .booking-form{padding:26px 18px;border-radius:22px;}
-  .send-buttons{grid-template-columns:1fr;}
-  .send-call{grid-column:auto;}
-  .footer-bottom{flex-direction:column;}
-  body{padding-bottom:76px;}
-  .mobile-cta{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:900;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(251,244,238,.97);border-top:1px solid rgba(60,31,44,.1);}
+  .contacts{margin-top:32px;padding-top:26px;}
+  .contacts h3{font-size:20px;}
+  .contact-row a{display:inline-block;padding:10px 0;}
+  .contact-row{font-size:15px;}
+  .send-buttons{grid-template-columns:1fr 1fr;}
+  .send-call{grid-column:span 2;}
+
+  footer{padding:32px 0 20px;}
+  .footer-top{padding-bottom:20px;margin-bottom:16px;gap:14px;}
+  .footer-links{gap:0 20px;}
+  .footer-links a{padding:11px 0;}
+  .footer-bottom{flex-direction:column;gap:2px;}
+  .footer-bottom a{display:inline-block;padding:11px 0;}
+  .consent{font-size:13px;}
+  .consent a{display:inline-block;padding:4px 0;}
+
+  /* нижня панель із записом і дзвінком */
+  body{padding-bottom:calc(72px + env(safe-area-inset-bottom));}
+  .mobile-cta{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:900;padding:9px 16px calc(9px + env(safe-area-inset-bottom));background:rgba(251,244,238,.97);border-top:1px solid rgba(60,31,44,.1);}
+  .mobile-cta.is-hidden{display:none;}
   .mobile-cta a{display:flex;align-items:center;justify-content:center;min-height:50px;border-radius:14px;font-weight:800;font-size:15px;}
   .mobile-cta .cta-book{flex:1;background:linear-gradient(135deg,#e3bd7b,#c8955a);color:#2e1d0b;}
   .mobile-cta .cta-call{width:56px;background:var(--plum-deep);color:#fff;}
   .mobile-cta .cta-call svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;}
 }
 @media (max-width:380px){
-  .hero-stats strong{font-size:19px;}
-  .hero-stats div{font-size:11.5px;}
+  .container{padding:0 14px;}
+  .hero-text h1{font-size:30px;}
+  .hero-stats strong{font-size:18px;}
+  .hero-stats div{font-size:11px;}
+  .section-head h2{font-size:25px;}
+  .service-card p{-webkit-line-clamp:3;}
+  .adv-grid{gap:20px 10px;}
 }
 </style>
 </head>
@@ -697,6 +758,13 @@ $('#newBooking').addEventListener('click', () => {
   $('#formView').hidden = false;
   F.name.focus();
 });
+
+/* ---- нижня панель ховається, коли форма на екрані ---- */
+const cta = document.querySelector('.mobile-cta');
+if (cta && 'IntersectionObserver' in window) {
+  new IntersectionObserver(es => es.forEach(e => cta.classList.toggle('is-hidden', e.isIntersecting)), { threshold: 0 })
+    .observe(document.querySelector('.booking-form'));
+}
 
 /* ---- Google Analytics 4 (вмикається, коли вписано ga4Id) ---- */
 if (CONFIG.ga4Id) {
